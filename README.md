@@ -5,3 +5,14 @@ Autopilot DIY Project for MSFS on XBOX
 The original code only supports one key at the same time.
 Now you can define keycode, keycode2, keycode3 like:
 {"pin":board.GP13, "keycode":Keycode.SHIFT, "keycode2":Keycode.U},
+
+## PIN Layout for autopilot.py:
+
+### Encoder
+
+#### Top Encoder Altitude
+GP0
+GP1
+GP2 Push
+
+
