@@ -88,8 +88,18 @@ class Button_Keycode():
                     keyboard.release(btn["keycode"])
 
 Buttons = Button_Keycode([
-    {"pin":board.GP8, "keycode":Keycode.F9},
-    {"pin":board.GP9, "keycode":Keycode.F10},
+    # Heading Bug Todo
+    {"pin":board.GP2, "keycode":Keycode.F9},
+    # Altitude Push Todo
+    {"pin":board.GP5, "keycode":Keycode.F9},
+    # Altitude ARM Todo
+    {"pin":board.GP6, "keycode":Keycode.F9},
+    # Altitude Flight Director Todo
+    {"pin":board.GP7, "keycode":Keycode.F9},
+    # Vertical Speed Down
+    {"pin":board.GP8, "keycode":Keycode.CONTROL, "keycode2":Keycode.END},
+    # Vertical Speed Up
+    {"pin":board.GP9, "keycode":Keycode.CONTROL, "keycode2":Keycode.HOME},
     {"pin":board.GP10, "keycode":Keycode.F11},
     {"pin":board.GP11, "keycode":Keycode.F12},
     {"pin":board.GP12, "keycode":Keycode.X,},
@@ -109,17 +119,17 @@ Buttons = Button_Keycode([
 ])
 
 Encoders = Encoder_Keycode([
-    # COM Interface
+    # Bottom Encoder Heading Bug
     {"encoder":rotaryio.IncrementalEncoder(board.GP0, board.GP1), \
-        "last_pos":0, "clock_wise":Keycode.ALT, "clock_wise2":Keycode.SHIFT, "clock_wise3":Keycode.PAGE_UP, "anti_clock_wise":Keycode.ALT, "anti_clock_wise2":Keycode.SHIFT, "anti_clock_wise3":Keycode.PAGE_DOWN},
-    {"encoder":rotaryio.IncrementalEncoder(board.GP2, board.GP3), \
-        "last_pos":0, "clock_wise":Keycode.F3, "anti_clock_wise":Keycode.F4},
-    {"encoder":rotaryio.IncrementalEncoder(board.GP4, board.GP5), \
-        "last_pos":0, "clock_wise":Keycode.F5, "anti_clock_wise":Keycode.F6},
-    {"encoder":rotaryio.IncrementalEncoder(board.GP6, board.GP7), \
-        "last_pos":0, "clock_wise":Keycode.F7, "anti_clock_wise":Keycode.F8},
+        "last_pos":0, "clock_wise":Keycode.CONTROL, "clock_wise2":Keycode.INSERT, "anti_clock_wise":Keycode.CONTROL, "anti_clock_wise2":Keycode.DELETE},
+    # Top Encoder Altitude
+    {"encoder":rotaryio.IncrementalEncoder(board.GP3, board.GP4), \
+        "last_pos":0, "clock_wise":Keycode.CONTROL, "clock_wise2":Keycode.PAGE_UP, "anti_clock_wise":Keycode.CONTROL, "anti_clock_wise2":Keycode.PAGE_DOWN},
 ])
 
 while True:
     Encoders.update()
     Buttons.update()
+
+# {"encoder":rotaryio.IncrementalEncoder(board.GP0, board.GP1), \
+#         "last_pos":0, "clock_wise":Keycode.ALT, "clock_wise2":Keycode.SHIFT, "clock_wise3":Keycode.PAGE_UP, "anti_clock_wise":Keycode.ALT, "anti_clock_wise2":Keycode.SHIFT, "anti_clock_wise3":Keycode.PAGE_DOWN},

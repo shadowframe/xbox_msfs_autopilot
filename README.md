@@ -10,14 +10,14 @@ Now you can define keycode, keycode2, keycode3 like:
 
 ### Encoder
 
-#### Top Encoder Heading Bug
+#### Bottom Encoder Heading Bug
 GP0
 
 GP1
 
 GP2 Push
 
-#### Bottom Encoder Altitude
+#### Top Encoder Altitude
 GP3
 
 GP4

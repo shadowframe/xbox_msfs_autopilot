@@ -93,7 +93,8 @@ Buttons = Button_Keycode([
     {"pin":board.GP10, "keycode":Keycode.F11},
     {"pin":board.GP11, "keycode":Keycode.F12},
     {"pin":board.GP12, "keycode":Keycode.X,},
-    {"pin":board.GP13, "keycode":Keycode.SHIFT, "keycode2":Keycode.U},
+    # COM Interface SWAP Frequency
+    {"pin":board.GP13, "keycode":Keycode.ALT, "keycode2":Keycode.U},
     {"pin":board.GP14, "keycode":Keycode.F15},
     {"pin":board.GP16, "keycode":Keycode.F16},
     {"pin":board.GP17, "keycode":Keycode.F17},
@@ -108,8 +109,9 @@ Buttons = Button_Keycode([
 ])
 
 Encoders = Encoder_Keycode([
+    # COM Interface
     {"encoder":rotaryio.IncrementalEncoder(board.GP0, board.GP1), \
-        "last_pos":0, "clock_wise":Keycode.SHIFT, "clock_wise2":Keycode.A, "anti_clock_wise":Keycode.SHIFT, "anti_clock_wise2":Keycode.B},
+        "last_pos":0, "clock_wise":Keycode.ALT, "clock_wise2":Keycode.SHIFT, "clock_wise3":Keycode.PAGE_UP, "anti_clock_wise":Keycode.ALT, "anti_clock_wise2":Keycode.SHIFT, "anti_clock_wise3":Keycode.PAGE_DOWN},
     {"encoder":rotaryio.IncrementalEncoder(board.GP2, board.GP3), \
         "last_pos":0, "clock_wise":Keycode.F3, "anti_clock_wise":Keycode.F4},
     {"encoder":rotaryio.IncrementalEncoder(board.GP4, board.GP5), \
