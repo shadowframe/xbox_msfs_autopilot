@@ -10,9 +10,46 @@ Now you can define keycode, keycode2, keycode3 like:
 
 ### Encoder
 
-#### Top Encoder Altitude
+#### Top Encoder Heading Bug
 GP0
+
 GP1
+
 GP2 Push
 
+#### Bottom Encoder Altitude
+GP3
+
+GP4
+
+GP5 Push
+
+### Buttons
+
+#### Top Right
+GP6 ARM
+
+GP7 Flight Director
+
+#### Bottom Right
+GP8 Vertical Speed DOWN
+
+GP9 Verticaal Speed UP
+
+#### Bottom 
+
+GP10 ALT
+
+GP11 APR
+
+GP12 NAV
+
+GP13 HDG
+
+GP14 FLC
+
+GP15 CDI
+
+#### Top Left
+GP16 AP
 
