@@ -6,6 +6,8 @@ The original code only supports one key at the same time.
 Now you can define keycode, keycode2, keycode3 like:
 {"pin":board.GP13, "keycode":Keycode.SHIFT, "keycode2":Keycode.U},
 
+Some more coding for on/off https://forums.flightsimulator.com/t/a-story-of-custom-build-cockpit-for-xbox/447134
+
 ## PIN Layout for autopilot.py:
 
 ### Encoder
