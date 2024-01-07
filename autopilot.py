@@ -94,8 +94,8 @@ Buttons = Button_Keycode([
     {"pin":board.GP5, "keycode":Keycode.F9},
     # Altitude ARM Todo
     {"pin":board.GP6, "keycode":Keycode.F9},
-    # Altitude Flight Director Todo
-    {"pin":board.GP7, "keycode":Keycode.F9},
+    # Flight Director 
+    {"pin":board.GP7, "keycode":Keycode.CONTROL, "keycode2":Keycode.F},
     # Vertical Speed Down
     {"pin":board.GP8, "keycode":Keycode.CONTROL, "keycode2":Keycode.END},
     # Vertical Speed Up
@@ -111,7 +111,7 @@ Buttons = Button_Keycode([
     # FLC Flight Level Change ... Todo
     {"pin":board.GP14, "keycode":Keycode.F15},
     # Autopilot ON/OFF !Change Keyboard Shortcut in the settings (Normaly On AND Off) from ON to TOGGLE
-    {"pin":board.GP15, "keycode":Keycode.ALT, "keycode2":Keycode.Z}
+    {"pin":board.GP15, "keycode":Keycode.ALT, "keycode2":Keycode.Z},
     {"pin":board.GP16, "keycode":Keycode.F16},
     {"pin":board.GP17, "keycode":Keycode.F17},
     {"pin":board.GP18, "keycode":Keycode.F18},
