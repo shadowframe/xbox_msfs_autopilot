@@ -26,16 +26,16 @@ class Encoder_Keycode():
                     k2 = enc["clock_wise2"]
                     k3 = enc["clock_wise3"]
                     keyboard.press(k, k2, k3)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k, k2, k3)
                 elif "clock_wise2" in enc:
                     k2 = enc["clock_wise2"]
                     keyboard.press(k, k2)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k, k2)
                 else:
                     keyboard.press(k)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k)
                 enc["last_pos"] = position
             elif position < last_pos:
@@ -44,16 +44,16 @@ class Encoder_Keycode():
                     k2 = enc["anti_clock_wise2"]
                     k3 = enc["anti_clock_wise3"]
                     keyboard.press(k, k2, k3)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k, k2, k3)
                 elif "anti_clock_wise2" in enc:
                     k2 = enc["anti_clock_wise2"]
                     keyboard.press(k, k2)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k, k2)
                 else:
                     keyboard.press(k)
-                    time.sleep(0.01)
+                    time.sleep(0.2)
                     keyboard.release(k)
                 enc["last_pos"] = position
 
@@ -92,27 +92,28 @@ Buttons = Button_Keycode([
     {"pin":board.GP2, "keycode":Keycode.F9},
     # Altitude Push Todo
     {"pin":board.GP5, "keycode":Keycode.F9},
-    # Altitude ARM Todo
-    {"pin":board.GP6, "keycode":Keycode.F9},
+    # Altitude ARM !TOGGLE VERTICAL SPEED
+    {"pin":board.GP6, "keycode":Keycode.CONTROL, "keycode2":Keycode.ALT, "keycode3":Keycode.V},
     # Flight Director 
     {"pin":board.GP7, "keycode":Keycode.CONTROL, "keycode2":Keycode.F},
     # Vertical Speed Down
     {"pin":board.GP8, "keycode":Keycode.CONTROL, "keycode2":Keycode.END},
     # Vertical Speed Up
     {"pin":board.GP9, "keycode":Keycode.CONTROL, "keycode2":Keycode.HOME},
-    # ALT Hold
-    {"pin":board.GP10, "keycode":Keycode.CONTROL, "keycode2":Keycode.T},
+    # ALT Hold !There are two altitude hold assignments at the settings, use the unassigned to ALT-T
+    {"pin":board.GP10, "keycode":Keycode.ALT, "keycode2":Keycode.T},
     # APROACH Hold
     {"pin":board.GP11, "keycode":Keycode.CONTROL, "keycode2":Keycode.A},
     # NAV GPS Mode
     {"pin":board.GP12, "keycode":Keycode.CONTROL, "keycode2":Keycode.N},
-    # HDG Mode Todo
-    {"pin":board.GP13, "keycode":Keycode.ALT, "keycode2":Keycode.U},
+    # HDG Mode Todo !Set Heading Hold STRG-U
+    {"pin":board.GP13, "keycode":Keycode.CONTROL, "keycode2":Keycode.U},
     # FLC Flight Level Change ... Todo
-    {"pin":board.GP14, "keycode":Keycode.F15},
-    # Autopilot ON/OFF !Change Keyboard Shortcut in the settings (Normaly On AND Off) from ON to TOGGLE
+    {"pin":board.GP14, "keycode":Keycode.ALT, "keycode2":Keycode.L},
+    # CDI Todo
     {"pin":board.GP15, "keycode":Keycode.ALT, "keycode2":Keycode.Z},
-    {"pin":board.GP16, "keycode":Keycode.F16},
+    # Autopilot ON/OFF !Change Keyboard Shortcut in the settings (Normaly On AND Off) from ON to TOGGLE
+    {"pin":board.GP16, "keycode":Keycode.Y},
     {"pin":board.GP17, "keycode":Keycode.F17},
     {"pin":board.GP18, "keycode":Keycode.F18},
     {"pin":board.GP19, "keycode":Keycode.F19},
@@ -130,7 +131,7 @@ Encoders = Encoder_Keycode([
         "last_pos":0, "clock_wise":Keycode.CONTROL, "clock_wise2":Keycode.INSERT, "anti_clock_wise":Keycode.CONTROL, "anti_clock_wise2":Keycode.DELETE},
     # Top Encoder Altitude
     {"encoder":rotaryio.IncrementalEncoder(board.GP3, board.GP4), \
-        "last_pos":0, "clock_wise":Keycode.CONTROL, "clock_wise2":Keycode.PAGE_UP, "anti_clock_wise":Keycode.CONTROL, "anti_clock_wise2":Keycode.PAGE_DOWN},
+        "last_pos":0, "clock_wise":Keycode.CONTROL, "clock_wise2":Keycode.PAGE_DOWN, "anti_clock_wise":Keycode.CONTROL, "anti_clock_wise2":Keycode.PAGE_UP},
 ])
 
 while True:
