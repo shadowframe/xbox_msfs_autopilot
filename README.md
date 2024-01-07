@@ -8,6 +8,11 @@ Now you can define keycode, keycode2, keycode3 like:
 
 Some more coding for on/off https://forums.flightsimulator.com/t/a-story-of-custom-build-cockpit-for-xbox/447134
 
+## rotary_pushbutton_switch.py
+Works with a on off Push (Sends only a key if you push)
+Works with a on / off switch (Only one GPIO and send two different keys)
+Works with an encoder
+
 ## PIN Layout for autopilot.py:
 
 ### Encoder
