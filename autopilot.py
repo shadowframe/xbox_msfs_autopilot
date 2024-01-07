@@ -100,12 +100,18 @@ Buttons = Button_Keycode([
     {"pin":board.GP8, "keycode":Keycode.CONTROL, "keycode2":Keycode.END},
     # Vertical Speed Up
     {"pin":board.GP9, "keycode":Keycode.CONTROL, "keycode2":Keycode.HOME},
-    {"pin":board.GP10, "keycode":Keycode.F11},
-    {"pin":board.GP11, "keycode":Keycode.F12},
-    {"pin":board.GP12, "keycode":Keycode.X,},
-    # COM Interface SWAP Frequency
+    # ALT Hold
+    {"pin":board.GP10, "keycode":Keycode.CONTROL, "keycode2":Keycode.T},
+    # APROACH Hold
+    {"pin":board.GP11, "keycode":Keycode.CONTROL, "keycode2":Keycode.A},
+    # NAV GPS Mode
+    {"pin":board.GP12, "keycode":Keycode.CONTROL, "keycode2":Keycode.N},
+    # HDG Mode Todo
     {"pin":board.GP13, "keycode":Keycode.ALT, "keycode2":Keycode.U},
+    # FLC Flight Level Change ... Todo
     {"pin":board.GP14, "keycode":Keycode.F15},
+    # Autopilot ON/OFF !Change Keyboard Shortcut in the settings (Normaly On AND Off) from ON to TOGGLE
+    {"pin":board.GP15, "keycode":Keycode.ALT, "keycode2":Keycode.Z}
     {"pin":board.GP16, "keycode":Keycode.F16},
     {"pin":board.GP17, "keycode":Keycode.F17},
     {"pin":board.GP18, "keycode":Keycode.F18},
